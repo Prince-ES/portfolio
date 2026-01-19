@@ -129,14 +129,53 @@
                 text-transform: uppercase;
                 padding: 10px;
                 transition: color 0.3s ease;
-            }          
+            }
+
+            
+            .hero-about{
+                height: 100vh;
+                width: 100%;
+                background: linear-gradient(
+                            225deg,
+                            #4b4b4b 0%,
+                            #111112 100%
+                            );
+                padding: 150px 70px;
+                display:flex;
+                justify-content: space-between;
+                
+            }
+
+            .hero-about .right-part img{
+                margin-top: 40px;
+                height: 500px;
+                border-radius: 20px;
+                box-shadow: rgba(0, 0, 0, 0.177) 20px 20px 20px;
+            }
+
+            .hero-about .title{
+                font-size: 100px;
+                margin-bottom: 50px;
+                color:white;                
+            }
+
+            .hero-about .content{
+                width: 700px;
+                color:white;
+            }
+
+            .hero-about .content h3{
+                margin-bottom: 20px;
+                font-size: 20px;
+                font-weight: normal;
+            }
             
         </style>
     </head>
     <body>
         <nav>
             <div class="logo">
-                <a href="#">Prince</a>
+                <a href="#">Prince</a> 
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -167,7 +206,26 @@
                     </p>
                 </div>
             </section>
-
+            <section class="hero-about">
+                <div class="about-left-part">
+                    <div class="title">
+                    <h1>About</h1>
+                    </div>
+                    <div class="content">
+                        <h3>
+                        I’m a web developer focused on building clean, responsive, and performant web applications. I enjoy working with modern JavaScript and have hands-on experience using React, Node.js, Express, and MongoDB to build real-world projects.
+                        </h3>
+                        <h3>Outside of development, I enjoy learning new technologies and improving my problem-solving skills through practice and projects.                        
+                        </h3>
+                        <h3>Currently, I’m preparing for software development internships where I can contribute to real products, learn from experienced developers, and grow as an engineer by working on meaningful features.                        
+                        </h3>
+                    </div>
+                </div>
+                <div class="right-part">
+                    <img src="./background_LE_upscale_balanced.png" alt="">
+                </div>
+                
+            </section>
         </main>
         
     </body>
