@@ -12,12 +12,18 @@
                 font-family: sans-serif, arial;
             }
 
+            body{
+                width: 100%;
+                overflow-x: hidden;
+            }
+
             .hero {
                 position: relative;
                 min-height: 100vh;
                 background: url("./background_LE_upscale_balanced.png") center / cover no-repeat;
                 overflow: hidden;
                 z-index: 0;
+                width: 100%;
             }
 
             .hero::after{
@@ -27,8 +33,7 @@
                 position: absolute;
                 background: linear-gradient(45deg,rgba(203, 7, 7, 0.132),rgba(128, 128, 128, 0.685), rgba(0, 0, 0, 0.318),rgba(128, 128, 128, 0.603),rgba(203, 7, 7, 0.186)); 
                 animation: animate 15s linear infinite;
-                                background-size:400%;
-
+                background-size:400%;
                 height: 100vh;
                 width: 100%;
                 z-index: -1;
@@ -54,7 +59,7 @@
                 width: 100%;
                 object-fit: cover;
                 z-index: 2;
-                }
+            }
 
             .hero-content .intro{
                 font-size: 25px;
@@ -131,26 +136,32 @@
                 transition: color 0.3s ease;
             }
 
-            
-            .hero-about{
-                height: 100vh;
-                width: 100%;
+            .other-sections{
                 background: linear-gradient(
                             225deg,
                             #4b4b4b 0%,
                             #111112 100%
                             );
-                padding: 150px 70px;
-                display:flex;
+            }
+
+            .hero-about{
+                margin: 0 auto;
+                padding: 8rem 4rem 0rem 8rem;
+                height: 100vh;
+            }
+
+            .hero-about .about-container{
+                display: flex;
                 justify-content: space-between;
-                
+                padding: 4rem 8rem 0rem 0rem;
             }
 
             .hero-about .right-part img{
-                margin-top: 40px;
-                height: 500px;
+                transform:translatey(-50%);
+                height: 600px;
                 border-radius: 20px;
                 box-shadow: rgba(0, 0, 0, 0.177) 20px 20px 20px;
+
             }
 
             .hero-about .title{
@@ -160,7 +171,7 @@
             }
 
             .hero-about .content{
-                width: 700px;
+                max-width: 700px;
                 color:white;
             }
 
@@ -169,7 +180,145 @@
                 font-size: 20px;
                 font-weight: normal;
             }
-            
+
+            .hero-portfolio{
+                width: 100%;        
+                color:white;
+                padding: 50px 20px;
+            }
+
+            .hero-portfolio .resume-sides{
+                display:flex;
+                justify-content: space-between;
+                gap: 2rem;
+            }
+
+            .hero-portfolio .left-side{
+                flex: 1;
+            }
+
+            .hero-portfolio .right-side{
+                flex: 1;
+            }
+
+            .resume-container {
+                max-width: 1700px;
+                margin: 0 auto;
+            }
+
+            .resume-header {
+                margin-bottom: 3.5rem;
+            }
+
+            .resume-header h1 {
+                font-size: 3rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+                color: #ffffff;
+            }
+
+            .resume-summary {
+                font-size: 1.05rem;
+                line-height: 1.7;
+                color: #cfcfd6;
+            }
+
+            .resume-section {
+                background-color: #161618;
+                border: 1px solid #242428;
+                border-radius: 14px;
+                padding: 2.2rem 2.4rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .resume-section h2 {
+                font-size: 1.4rem;
+                margin-bottom: 1.4rem;
+                color: #ffffff;
+            }
+
+            .skills-list {
+                list-style: none;
+                padding: 0;
+            }
+
+            .skills-list li {
+                font-size: 0.95rem;
+                margin-bottom: 0.7rem;
+                color: #d6d6dc;
+            }
+
+            .skills-list strong {
+                color: #ffffff;
+            }
+
+            .project {
+                margin-bottom: 1.6rem;
+            }
+
+            .project:last-child {
+                margin-bottom: 0;
+            }
+
+            .project h3 {
+                font-size: 1.05rem;
+                margin-bottom: 0.35rem;
+                color: #ffffff;
+            }
+
+            .project p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+                color: #cfcfd6;
+            }
+
+            .education-item h3 {
+                font-size: 1.05rem;
+                margin-bottom: 0.3rem;
+                color: #ffffff;
+            }
+
+            .muted {
+                font-size: 0.9rem;
+                color: #a1a1aa;
+            }
+
+            .resume-section ul {
+                padding-left: 1.2rem;
+            }
+
+            .resume-section ul li {
+                font-size: 0.95rem;
+                margin-bottom: 0.6rem;
+                color: #cfcfd6;
+            }
+
+            .resume-download {
+                width: 100%;
+                max-width: 400px;
+                margin: auto;
+                text-align: center;
+                margin-top: 3.5rem;
+            }
+
+            .resume-btn {
+                display: inline-block;
+                padding: 0.9rem 1.8rem;
+                font-size: 0.95rem;
+                font-weight: 600;
+                color: #0f0f10;
+                background-color: #ffffff;
+                border-radius: 999px;
+                text-decoration: none;
+                transition: background-color 0.2s ease, transform 0.2s ease;
+            }
+
+            .resume-btn:hover {
+                background-color: #e5e5e5;
+                transform: translateY(-2px);
+            }
+
+           
         </style>
     </head>
     <body>
@@ -189,7 +338,7 @@
         </nav>
 
         <main>
-            <section class="hero">
+            <section class="hero" id="home">
                 <div class="hero-content">
                     <img
                     src="./self_LE_upscale_balanced.png"
@@ -206,26 +355,114 @@
                     </p>
                 </div>
             </section>
-            <section class="hero-about">
-                <div class="about-left-part">
-                    <div class="title">
-                    <h1>About</h1>
+
+            <section class="other-sections">
+                <section class="hero-about" id="about">         
+                    
+                        <div class="about-left-part">
+                            <div class="title">
+                                <h1>About</h1>
+                            </div>
+                            <div class="content">
+                                <h3>
+                                I'm a web developer focused on building clean, responsive, and performant web applications. I enjoy working with modern JavaScript and have hands-on experience using React, Node.js, Express, and MongoDB to build real-world projects.
+                                </h3>
+                                <h3>Outside of development, I enjoy learning new technologies and improving my problem-solving skills through practice and projects.                        
+                                </h3>
+                                <h3>Currently, I'm preparing for software development internships where I can contribute to real products, learn from experienced developers, and grow as an engineer by working on meaningful features.                        
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="right-part">
+                        </div>                                 
+                </section >
+             
+                <section class="hero-portfolio" id="portfolio">
+                    <div class="resume-container">
+                        <header class="resume-header">
+                            <h1>Resume</h1>
+
+                            <p class="resume-summary">
+                                Aspiring web developer with hands-on experience building responsive web
+                                applications using React, Node.js, and modern JavaScript. Focused on writing
+                                clean code, learning core concepts deeply, and improving through real-world projects.
+                                Currently seeking a software development internship.
+                            </p>
+                        </header>
+                        <div class="resume-sides">
+                            <div class="left-side">
+                                <section class="resume-section">
+                                <h2>Skills</h2>
+
+                                <ul class="skills-list">
+                                    <li><strong>Frontend:</strong> HTML, CSS, JavaScript, React</li>
+                                    <li><strong>Backend:</strong> Node.js, Express</li>
+                                    <li><strong>Databases:</strong> MongoDB (basic)</li>
+                                    <li><strong>Tools:</strong> Git, GitHub, VS Code</li>
+                                    <li><strong>Core Concepts:</strong> REST APIs, JavaScript fundamentals, basic DSA</li>
+                                </ul>
+                            </section>
+
+                            <section class="resume-section">
+                                <h2>Projects & Hands-On Experience</h2>
+
+                                <article class="project">
+                                    <h3>Portfolio Website</h3>
+                                    <p>
+                                    Designed and built a responsive personal portfolio using HTML, CSS,
+                                    and JavaScript with a focus on clean UI and performance.
+                                    </p>
+                                </article>
+
+                                <article class="project">
+                                    <h3>Todo Application</h3>
+                                    <p>
+                                    Built a full-stack todo application using React and Node.js.
+                                    Implemented CRUD operations and basic REST APIs.
+                                    </p>
+                                </article>
+
+                                <article class="project">
+                                    <h3>Practice Projects</h3>
+                                    <p>
+                                    Worked on multiple small projects to strengthen JavaScript fundamentals,
+                                    problem-solving skills, and backend basics.
+                                    </p>
+                                </article>
+                            </section>
+                            </div>
+                            <div class="right-side">
+                                <section class="resume-section">
+                                <h2>Education</h2>
+
+                                <div class="education-item">
+                                    <h3>Bachelor's Degree (Ongoing)</h3>
+                                    <p class="muted">
+                                    Relevant coursework: Data Structures, Web Development, Programming Fundamentals
+                                    </p>
+                                </div>
+                            </section>
+
+                            <section class="resume-section">
+                                <h2>Learning & Activities</h2>
+
+                                <ul>
+                                    <li>Regularly practice problem-solving and coding challenges</li>
+                                    <li>Build personal projects to apply new concepts</li>
+                                    <li>Actively learning modern web development best practices</li>
+                                </ul>
+                            </section>
+                            </div>
+                        </div>
+                        <section class="resume-download">
+                            <a href="./resume.pdf" download class="resume-btn">
+                                Download Resume (PDF)
+                            </a>
+                        </section>
                     </div>
-                    <div class="content">
-                        <h3>
-                        I’m a web developer focused on building clean, responsive, and performant web applications. I enjoy working with modern JavaScript and have hands-on experience using React, Node.js, Express, and MongoDB to build real-world projects.
-                        </h3>
-                        <h3>Outside of development, I enjoy learning new technologies and improving my problem-solving skills through practice and projects.                        
-                        </h3>
-                        <h3>Currently, I’m preparing for software development internships where I can contribute to real products, learn from experienced developers, and grow as an engineer by working on meaningful features.                        
-                        </h3>
-                    </div>
-                </div>
-                <div class="right-part">
-                    <img src="./background_LE_upscale_balanced.png" alt="">
-                </div>
-                
+                </section>
             </section>
+            
         </main>
         
     </body>
