@@ -534,6 +534,366 @@
                 color: #a1a1aa;
             }
 
+            /* Mobile Responsive Styles */
+            @media screen and (max-width: 768px) {
+                nav {
+                    padding: 15px 20px;
+                }
+
+                nav .logo a {
+                    font-size: 20px;
+                }
+
+                nav .nav-links {
+                    flex-wrap: wrap;
+                    gap: 10px;
+                }
+
+                nav .nav-links li {
+                    margin-left: 0;
+                }
+
+                nav .nav-links a {
+                    font-size: 14px;
+                    padding: 8px;
+                }
+
+                .hero-content {
+                    width: 60%;
+                    padding: 0px 30px;
+                }
+
+                .hero-content .intro {
+                    font-size: 18px;
+                }
+
+                .hero-content .title {
+                    font-size: 40px;
+                }
+
+                .hero-content .description {
+                    font-size: 16px;
+                }
+
+                .hero-about {
+                    flex-direction: column;
+                    padding: 100px 0px 50px;
+                    min-height: auto;
+                }
+
+                .hero-about .title {
+                    font-size: 50px;
+                    margin-bottom: 30px;
+                }
+
+                .hero-about .content {
+                    max-width: 100%;
+                }
+
+                .hero-about .content h3 {
+                    font-size: 16px;
+                }
+
+                .hero-about .about-container{
+                    justify-content:center;
+                    align-items: center;
+                    flex-direction: column-reverse;
+                    padding: 0px 20px;
+                }
+
+                .hero-about .about-left-part{
+                    margin-top: 30px;
+                }
+
+                .hero-about .about-right-part img {
+                    transform: translateY(0%);
+                    height: 500px;
+                }
+
+                .hero-portfolio {
+                    padding: 50px 20px;
+                }
+
+                .resume-header h1 {
+                    font-size: 2rem;
+                }
+
+                .resume-summary {
+                    font-size: 0.95rem;
+                }
+
+                .hero-portfolio .resume-sides {
+                    flex-direction: column;
+                }
+
+                .resume-section {
+                    padding: 1.5rem;
+                }
+
+                .resume-download {
+                    width: 100%;
+                }
+
+                .hero-contact {
+                    padding: 4rem 1.5rem;
+                }
+
+                .hero-contact .left-side {
+                    flex-direction: column;
+                }
+
+                .hero-contact .contact-info-and-header {
+                    margin-right: 0;
+                }
+
+                .contact-header h1 {
+                    font-size: 2rem;
+                }
+
+                .contact-intro {
+                    font-size: 0.95rem;
+                }
+
+                .contact-info {
+                    padding: 1.5rem;
+                }
+
+                .contact-info li {
+                    flex-direction: column;
+                    gap: 0.3rem;
+                }
+
+                .contact-form-section {
+                    padding: 1.5rem;
+                }
+            }
+
+            @media screen and (max-width: 480px) {
+
+                nav{
+                    display:none;
+                }
+
+                nav .nav-links {
+                    display: none;
+                }
+
+                aside{
+                    display: block;
+                }
+
+                body .fa-bars{
+                    display: block;;
+                }
+                .hero-content {
+                    padding: 0px 20px;
+                }
+
+                .hero-content .title {
+                    font-size: 32px;
+                }
+
+                .hero-content .intro {
+                    font-size: 16px;
+                }
+
+                .hero-content .description {
+                    font-size: 14px;
+                }
+
+                .hero-about {
+                    padding: 80px 20px 30px;
+                }
+
+                .hero-about .about-container{
+                    padding: 0px;
+                }
+
+                .hero-about .title {
+                    font-size: 36px;
+                }
+
+                .hero-portfolio {
+                    padding: 30px 15px;
+                }
+
+                .resume-header h1 {
+                    font-size: 1.75rem;
+                }
+
+                .resume-section {
+                    padding: 1.2rem;
+                }
+
+                .hero-contact {
+                    padding: 3rem 1rem;
+                }
+
+                .contact-header h1 {
+                    font-size: 1.75rem;
+                }
+
+                .contact-info,
+                .contact-form-section {
+                    padding: 1.2rem;
+                }
+            }
+
+            .mobile-navigation{
+                margin: 0px auto;
+                position:fixed;
+                width: 200px;
+                right: -200px;
+                top: 0px;
+                bottom: 0px;
+                z-index: 4;
+                transition: 0.5s ease-in-out;
+                border-left:1px solid grey;
+                overflow-y: auto;
+                scrollbar-width: none;;
+                background-color:transparent;
+                backdrop-filter: blur(20px);
+            }
+
+            .mobile-navigation.active{
+                margin: 0px auto;
+                position:fixed;
+                width: 200px;
+                right: 0px;
+                top: 0px;
+                bottom: 0px;
+                z-index: 4;
+            }
+
+            .fa-bars{
+                position:fixed;
+                top: 1rem;
+                right: 1.5rem;
+                z-index: 5;
+                display:block;
+                color:white;
+                font-size: 30px;
+            }
+            .fa-bars.active{
+                display: none;
+            }
+
+            .fa-times{
+                display:none;
+            }
+
+            .fa-times.active{
+                line-height: 75px;;
+                font-size: 35px; 
+                z-index: 5;
+                color:white;
+                display: block;
+            }
+
+            .mobile-navigation .container{
+                height: 100%;
+            }
+            
+            .mobile-navigation .container .nav-header{
+                display: flex;
+                justify-content: space-between;
+                color:white;
+                font-size: 20px;
+                font-weight: bold;
+                height: 10%;
+                line-height: 75px;
+                padding: 0px 1rem;
+                border-bottom: 1px solid grey;
+            }
+
+            .mobile-navigation .nav-body .nav-menutabs{
+                margin-top: 10px;
+            }
+
+            .mobile-navigation .nav-menutabs li,
+            .resume-download{
+                color:white;
+                line-height: 50px;
+                height: 50px;
+                list-style-type: none;
+                transition: 0.15s  ease-in-out;
+                width: 90%;
+                margin:auto;
+                border-radius: 5px;
+                padding: 0px 1rem;
+            }
+
+            .nav-menutabs li:hover{
+                background-color: grey;
+            }
+
+            .more-menu {
+                position: relative;
+                cursor: pointer;
+            }
+
+            .mobile-dropdown {
+                display: none;
+                position: absolute;
+                left: 0;
+                right:2rem;
+                top: 100%;
+                background: #222;
+                padding: 10px;
+                border-radius: 6px;
+            }
+
+            .mobile-dropdown li {
+                list-style: none;
+                display: flex;            
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .mobile-dropdown a {
+                color: white;
+                text-decoration: none;
+                margin-right: 1rem;
+            }
+
+            .more-menu.open .mobile-dropdown {
+                display: block;
+            }
+
+            .more-menu.open{
+                background-color: grey;
+            }
+
+            .nav-body {
+                height: 90%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .nav-body .socials{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0px 1rem;
+            }
+
+            .nav-body .socials li{
+                list-style: none;
+                font-size: 25px;
+                background-color: white;
+                margin: 5px;
+                border-radius: 5px;;
+            }
+
+            .fa-linkedin{
+                color:rgb(1, 109, 252);
+            }
+
+
+
+
         </style>
     </head>
     <body>
@@ -552,7 +912,43 @@
             </ul>
         </nav>
 
-       
+        <!--nav for phone-->
+        <i class="fas fa-bars hamburger-bars"></i>
+        <aside class="mobile-navigation">
+
+            <div class="container">
+                <div class="nav-header">
+                    <h4 class="title">
+                        Contents
+                    </h4>
+                    <div class="">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="nav-body" >
+                    <ol class="nav-menutabs" >
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Portfolio</li>
+                        <li>Contact</li>
+                        <li class="more-menu">
+                            More
+                            <ol class="mobile-dropdown">
+                                <li>
+                                    <a href="./resume.pdf" download>Resume </a><i class="fas fa-download"></i>
+                                    
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                     <ol class="socials">
+                        <li><i class="fa-brands fa-github"></i></li>
+                        <li><i class="fa-brands fa-linkedin"></i></li>
+                    </ol>
+                </div>
+            </div>
+        </aside>
+
         <main>
             <section class="hero" id="home">
                 <div class="hero-content">
@@ -750,6 +1146,35 @@
                 </section>
             </section>
             
-        </main>        
+        </main>
+        
+
+        <script>
+            const moreMenu = document.querySelector('.more-menu');
+
+            moreMenu.addEventListener('click', (e) => {
+                e.stopPropagation();
+                moreMenu.classList.toggle('open');
+                });
+
+
+            const hamburger = document.querySelector('.fa-bars');
+            const navbar = document.querySelector('.mobile-navigation');
+            const times = document.querySelector('.fa-times');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.add('active');
+                navbar.classList.add('active');
+                times.classList.add('active');
+            });
+
+
+            times.addEventListener('click', () => {
+                times.classList.remove('active');
+                hamburger.classList.remove('active');
+                navbar.classList.remove('active');
+            });
+        </script>
+        
     </body>
 </html>
