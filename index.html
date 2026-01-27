@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
             <script src="https://kit.fontawesome.com/f502fdf9bd.js" crossorigin="anonymous"></script>
         <title>Portfolio</title>
         <style>
@@ -19,6 +20,12 @@
                 overflow-x: hidden;
             }
 
+            .section{
+                opacity: 0;
+                transform: translateY(30px);
+                transition: all 0.5s ease;
+            }            
+
             .hero {
                 position: relative;
                 min-height: 100vh;
@@ -33,7 +40,7 @@
                 top: 0px;
                 left: 0px;
                 position: absolute;
-                background: linear-gradient(45deg,rgba(203, 7, 7, 0.132),rgba(128, 128, 128, 0.685), rgba(0, 0, 0, 0.318),rgba(128, 128, 128, 0.603),rgba(203, 7, 7, 0.186)); 
+                background: linear-gradient(45deg,rgba(0, 0, 0, 0.3),rgba(128, 128, 128, 0.685), rgba(0, 0, 0, 0.318),rgba(128, 128, 128, 0.603),rgba(0, 0, 0, 0.3)); 
                 animation: animate 15s linear infinite;
                 background-size:400%;
                 height: 100vh;
@@ -950,7 +957,7 @@
         </aside>
 
         <main>
-            <section class="hero" id="home">
+            <div class="hero" id="home" >
                 <div class="hero-content">
                     <img
                     src="./self_LE_upscale_balanced.png"
@@ -966,10 +973,10 @@
                         React, Node.js, and modern JavaScript.
                     </p>
                 </div>
-            </section>
+            </div>
 
-            <section class="other-sections">
-                <section class="hero-about" id="about">
+            <div class="other-sections" >
+                <section class="section hero-about" id="about"  data-aos="fade-up">
                     <div class="title">
                             <h1>About</h1>
                     </div>
@@ -993,7 +1000,7 @@
                                 
                 </section >
              
-                <section class="hero-portfolio" id="portfolio">
+                <section class="section hero-portfolio" id="portfolio"  data-aos="fade-up">
                     <div class="resume-container">
                         <header class="resume-header">
                             <h1>Resume</h1>
@@ -1007,7 +1014,7 @@
                         </header>
                         <div class="resume-sides">
                             <div class="left-side">
-                                <section class="resume-section">
+                                <section class="section resume-section"  data-aos="fade-up">
                                 <h2>Skills</h2>
 
                                 <ul class="skills-list">
@@ -1019,7 +1026,7 @@
                                 </ul>
                             </section>
 
-                            <section class="resume-section">
+                            <section class="section resume-section"  data-aos="fade-up">
                                 <h2>Projects & Hands-On Experience</h2>
 
                                 <article class="project">
@@ -1048,7 +1055,7 @@
                             </section>
                             </div>
                             <div class="right-side">
-                                <section class="resume-section">
+                                <section class="section resume-section"  data-aos="fade-up">
                                 <h2>Education</h2>
 
                                 <div class="education-item">
@@ -1059,7 +1066,7 @@
                                 </div>
                             </section>
 
-                            <section class="resume-section">
+                            <section class="section resume-section"  data-aos="fade-up">
                                 <h2>Learning & Activities</h2>
 
                                 <ul>
@@ -1070,7 +1077,7 @@
                             </section>
                             </div>
                         </div>
-                        <section class="resume-download">
+                        <section class="section resume-download"  data-aos="fade-up">
                             <a href="./resume.pdf" download class="resume-btn">
                                 Download Resume (PDF)
                             </a>
@@ -1078,7 +1085,7 @@
                     </div>
                 </section>
 
-                <section class="hero-contact" id="contact">
+                <section class="section hero-contact" id="contact"  data-aos="fade-up">
                     <div class="contact-container">
                         <div class="left-side">
                             <div class="contact-info-and-header">
@@ -1089,7 +1096,7 @@
                                         Feel free to reach out if you'd like to connect or discuss anything.
                                     </p>
                                 </header>
-                                <section class="contact-info">
+                                <section class="section contact-info"  data-aos="fade-up">
                                     <ul>
                                         <li>
                                         <span>Email:</span>
@@ -1114,7 +1121,7 @@
                             </div>
                         
 
-                            <section class="contact-form-section">
+                            <section class="section contact-form-section"  data-aos="fade-up">
                                 <h2>Send a Message</h2>
 
                                 <form class="contact-form">
@@ -1144,11 +1151,21 @@
                         </p>
                     </div>
                 </section>
-            </section>
+            </div>
             
         </main>
         
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000,
+                easing: 'ease-in-out',
+                once:true,
+            })
+           
 
+            
+        </script>
         <script>
             const moreMenu = document.querySelector('.more-menu');
 
