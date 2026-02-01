@@ -100,7 +100,8 @@
         display: inline-block;
         margin-top: 0.6rem;
         font-size: 0.9rem;
-        color: #4f46e5;
+        color: rgb(63, 200, 202);
+        font-weight: bold;
         text-decoration: none;
         transition: color 0.2s ease;
     }

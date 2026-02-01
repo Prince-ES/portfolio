@@ -54,7 +54,7 @@
                             More
                             <ol class="mobile-dropdown">
                                 <li>
-                                    <a href="./assets/images/resume.pdf" download>Resume </a><i class="fas fa-download"></i>
+                                    <a href="./assets/resume/PRINCE.pdf" download>Resume </a><i class="fas fa-download"></i>
                                     
                                 </li>
                             </ol>
@@ -118,7 +118,7 @@
                             <h1>Resume</h1>
 
                             <p class="resume-summary">
-                                Aspiring web developer with hands-on experience building responsive web
+                                Web developer with hands-on experience building responsive web
                                 applications using React, Node.js, and modern JavaScript. Focused on writing
                                 clean code, learning core concepts deeply, and improving through real-world projects.
                                 Currently seeking a software development internship.
@@ -192,7 +192,7 @@
                                 <h2>Education</h2>
 
                                 <div class="education-item">
-                                    <h3>Bachelor of Computer Application (Ongoing)</h3>
+                                    <h3>Bachelor of Computer Application (BCA) - (Ongoing)</h3>
                                     <p class="muted">
                                     Relevant coursework: Data Structures, Web Development, Programming Fundamentals
                                     </p>
@@ -211,7 +211,7 @@
                             </div>
                         </div>
                         <section class="section resume-download"  data-aos="fade-up">
-                            <a href="./assets/images/resume.pdf" download class="resume-btn">
+                            <a href="./assets/resume/PRINCE.pdf" download class="resume-btn">
                                 Download Resume (PDF)
                             </a>
                         </section>
@@ -233,7 +233,7 @@
                                     <ul>
                                         <li>
                                         <span>Email:</span>
-                                        <a href="">mauryaprince379@gmail.com</a>
+                                        <a href="mailto:mauryaprince379@gmail.com">mauryaprince379@gmail.com</a>
                                         </li>
 
                                         <li>
@@ -257,7 +257,9 @@
                             <section class="section contact-form-section"  data-aos="fade-up">
                                 <h2>Send a Message</h2>
 
-                                <form action="./success.html"class="contact-form">
+                                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="./success.html"class="contact-form">
+                                    <input type="hidden" name="form-name" value="contact"/>
+                                    <input type="text" name="bot-field" style="display:none">
                                     <div class="form-group">
                                     <label for="name">Name</label>
                                     <input type="text" id="name" name="name" required />
