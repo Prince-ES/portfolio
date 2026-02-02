@@ -1,7 +1,8 @@
 .hero-contact {
         color: #e6e6e6;
         padding: 8rem 4rem;
-        min-height: 100vh;
+        min-height: 100svh;
+        margin-top: 3rem;
     }
 
     .contact-container {
