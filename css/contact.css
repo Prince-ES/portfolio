@@ -1,12 +1,13 @@
 .hero-contact {
         color: #e6e6e6;
-        padding: 8rem 4rem;
+        padding: 8rem 4rem 4rem 4rem;
         min-height: 100svh;
-        margin-top: 3rem;
+        box-sizing: border-box;
     }
 
     .contact-container {
         max-width: 1700px;
+        padding: 4rem 0rem;
         margin: 0 auto;
     }
 
