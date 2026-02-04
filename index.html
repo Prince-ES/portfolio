@@ -257,9 +257,9 @@
                             <section class="section contact-form-section"  data-aos="fade-up">
                                 <h2>Send a Message</h2>
 
-                                <form name="contact" action="/success.html"class="contact-form" netlify>
-                                    <input type="hidden" name="form-name" value="contact"/>
-                                    <input type="text" name="bot-field" style="display:none">
+                                <form name="contact" action="https://formspree.io/f/mykprneg" method="POST" class="contact-form">
+                                    <input type="hidden" name="_redirect" value="/success.html">
+                                    
                                     <div class="form-group">
                                     <label for="name">Name</label>
                                     <input type="text" id="name" name="name" required />
