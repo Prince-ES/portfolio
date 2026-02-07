@@ -12,7 +12,7 @@
         top: 0px;
         left: 0px;
         position: absolute;
-        background: linear-gradient(45deg,rgba(0, 0, 0, 0.3),rgba(128, 128, 128, 0.685), rgba(0, 0, 0, 0.318),rgba(128, 128, 128, 0.603),rgba(0, 0, 0, 0.3)); 
+        background: linear-gradient(90deg,rgba(0, 0, 0, 0.3),rgba(128, 128, 128, 0.685), rgba(0, 0, 0, 0.318),rgba(128, 128, 128, 0.603),rgba(0, 0, 0, 0.3)); 
         animation: animate 15s linear infinite;
         background-size:400%;
         height: 100vh;

@@ -317,7 +317,7 @@
         color:white;
         font-size: 20px;
         font-weight: bold;
-        height: 10%;
+        height: 5%;
         line-height: 75px;
         padding: 0px 1rem;
         border-bottom: 1px solid grey;
@@ -338,6 +338,11 @@
         margin:auto;
         border-radius: 5px;
         padding: 0px 1rem;
+    }
+
+    .nav-body .nav-menutabs li a{
+        color:white;
+        text-decoration:none;
     }
 
     .nav-menutabs li:hover{
