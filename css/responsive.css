@@ -407,6 +407,11 @@
         margin: 5px;
         border-radius: 5px;;
     }
+    
+    .nav-body .socials li a{
+        color: black;
+        display: block;
+    }
 
     .fa-linkedin{
         color:rgb(1, 109, 252);
